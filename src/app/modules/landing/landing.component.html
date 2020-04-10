@@ -12,7 +12,7 @@
 </header>
 
 <section class="description bg-dark">
-    <div class="container bg-dark text-center text-white p-5">
+    <div class="container bg-dark text-center text-white p-5" id="general-description">
         <p class="lead mb-0">
             COVID-19 is a once-in-a-century pandemic, likely to infect millions. Our healthcare heroes are working long
             hours in difficult conditions to save lives. And they need the help of brilliant hackers and entrepreneurs
@@ -20,14 +20,12 @@
             to fix COVID.
         </p>
         <div class="button-section d-flex justify-content-around mt-5">
-            <a class="btn btn-lg btn-light v-center" href="#">Feed the Heroes</a>
-            <a class="btn btn-lg btn-light" href="#">Healthcare System Data</a>
-            <a class="btn btn-lg btn-light v-center" href="#">CoVent-19</a>
+            <a class="btn btn-lg btn-light v-center" [routerLink]="['/home']" fragment="challenge-feed-a-hero">Feed the
+                Heroes</a>
+            <a class="btn btn-lg btn-light" [routerLink]="['/home']" fragment="challenge-healthcare-system-data">Healthcare
+                System Data</a>
+            <a class="btn btn-lg btn-light v-center" [routerLink]="['/home']" fragment="challenge-covent-19">CoVent-19</a>
         </div>
-    </div>
-</section>
-<section>
-    <div class="container">
     </div>
 </section>
 
@@ -140,7 +138,7 @@
 
         <h5 class="mb-3 mt-5 section-title text-center text-dark font-weight-bold">Active Challenges</h5>
 
-        <div class="row no-gutters">
+        <div class="row no-gutters" id="challenge-feed-a-hero">
             <div class="col-lg-6 order-lg-2 text-white showcase-img">
                 <img class="w-100" src="../../../assets/img/feed-a-hero.png" alt="feed-a-hero">
             </div>
@@ -155,7 +153,7 @@
                 </a>
             </div>
         </div>
-        <div class="row no-gutters">
+        <div class="row no-gutters" id="challenge-healthcare-system-data">
             <div class="col-lg-6 text-white showcase-img">
                 <img class="w-100" src="../../../assets/img/healthcare-system-data.png" alt="healthcare-system-data">
             </div>
@@ -167,12 +165,12 @@
                     Platform 2: track infection, hospital capacity and capability. <br>
                     Platform 3: epidemiological contact tracing.
                 </p>
-                <a class="btn btn-lg btn-primary mt-3 text-light" href="#">Learn more
+                <a class="btn btn-lg btn-primary mt-3 text-light" [routerLink]="['/challenge']">Learn more
                     <span class="fa fa-chevron-right"></span>
                 </a>
             </div>
         </div>
-        <div class="row no-gutters">
+        <div class="row no-gutters" id="challenge-covent-19">
             <div class="col-lg-6 order-lg-2 text-white showcase-img d-flex"
                 style="background-image: url('../../../assets/img/covent-19.png');">
                 <img class="m-auto" src="../../../assets/img/covent-19-logo.png" alt="covent-19.png">
@@ -182,7 +180,8 @@
                 <p class="lead mb-0 flex-fill">
                     An Open Innovation Effort to Design a Rapidly Deployable Mechanical Ventilator
                 </p>
-                <a class="btn btn-lg btn-primary mt-3 text-light" href="#">Learn more
+                <a class="btn btn-lg btn-primary mt-3 text-light" target="_blank"
+                    href="https://www.coventchallenge.com/">Learn more
                     <span class="fa fa-chevron-right"></span>
                 </a>
             </div>
