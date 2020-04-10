@@ -1,0 +1,66 @@
+:host {
+    .banner {
+        width: 100%;
+        height: 350px;
+    }
+    .bg-dark {
+        span{
+            opacity: 1.0;
+            font-family: 'Montserrat',Helvetica,Arial,serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 21.0px;
+        }
+    }
+    .description {
+        background-color: rgba(239,239,239,1.0);
+        top: 0;
+        height: 278px;
+        padding: 3rem;
+        h3 {
+            line-height: 19.0px;
+            font-family: 'Montserrat',Helvetica,Arial,serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 16.0px;
+            color: rgba(47,54,75,1.0);
+            text-align: center;
+            padding-bottom: 4%;
+        }
+        p {
+            font-family: 'Montserrat',Helvetica,Arial,serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 14.0px;
+            line-height: 18.0px;
+            text-align: center;
+            color: rgba(47,54,75,1.0);
+        }
+    }
+    .space {
+        justify-content: space-evenly;
+        h4 {
+            font-weight: 800;
+            font-style: normal;
+            font-size: 16.0px;
+            color: rgba(255,255,255,1.0);
+            text-align: center
+        }
+    }
+    .top {
+        margin-bottom: 3rem !important;
+    }
+    ul {
+        font-family: 'Montserrat',Helvetica,Arial,serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 14.0px;
+        color: rgba(47,54,75,1.0);
+        text-align: left;
+        line-height: 36px;
+        padding-top: 22px;
+    }
+    h4 {
+        line-height: 50px;
+    }
+}
