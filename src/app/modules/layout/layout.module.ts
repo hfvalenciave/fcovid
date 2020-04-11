@@ -7,7 +7,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
 import { SponsorSectionComponent } from './components/sponsor-section/sponsor-section.component';
-
+import { ContactModalComponent } from './components/contact-modal/contact-modal.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -15,18 +16,25 @@ import { SponsorSectionComponent } from './components/sponsor-section/sponsor-se
         FooterComponent,
         HeaderComponent,
         MainComponent,
-        SponsorSectionComponent
+        SponsorSectionComponent,
+        ContactModalComponent
     ],
     exports: [
         FooterComponent,
         HeaderComponent,
         MainComponent,
-        SponsorSectionComponent
+        SponsorSectionComponent,
+        ContactModalComponent
     ],
     imports: [
         CommonModule,
         NgxPageScrollModule,
-        RouterModule
+        RouterModule,
+        ModalModule.forRoot()
+    ],
+    entryComponents: 
+    [
+        ContactModalComponent
     ]
 })
 export class LayoutModule { }
