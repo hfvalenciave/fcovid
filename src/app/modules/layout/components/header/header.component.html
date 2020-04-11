@@ -6,7 +6,14 @@
         </a>
         <div class="m-0 p-0">
             <a class="d-none d-md-inline-block text-light mr-5" [routerLink]="['/home']" fragment="general-description"> F/COVID </a>
-            <span class="d-none d-md-inline-block text-light"> Challenges </span>
+            <div class="dropdown">
+                <button class="dropbtn">Challenges</button>
+                <div class="dropdown-content">
+                  <a [routerLink]="['/challenge']" > Feed the heroes </a>
+                  <a [routerLink]="['/challenge']" > Healthcare System Data </a>
+                  <a [routerLink]="['/challenge']" > CoVent-19 </a>
+                </div>
+              </div>
             <a class="btn btn-light d-none d-md-inline-block mx-3" href="#">I want to participate</a>
             <a class="btn btn-light" href="#">Donate</a>
         </div>
