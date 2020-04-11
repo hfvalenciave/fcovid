@@ -1,3 +1,4 @@
+import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -12,7 +13,8 @@ import { LayoutModule } from './modules/layout/layout.module';
     imports: [
         AppRoutingModule,
         BrowserModule,
-        LayoutModule
+        LayoutModule,
+        NgxPageScrollModule
     ],
     providers: [],
     bootstrap: [AppComponent]

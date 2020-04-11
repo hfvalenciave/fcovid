@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -24,6 +25,7 @@ import { SponsorSectionComponent } from './components/sponsor-section/sponsor-se
     ],
     imports: [
         CommonModule,
+        NgxPageScrollModule,
         RouterModule
     ]
 })

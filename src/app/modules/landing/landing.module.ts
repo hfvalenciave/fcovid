@@ -5,6 +5,7 @@ import { LayoutModule } from './../layout/layout.module';
 import { LandingTeamComponent } from './components/landing-team/landing-team.component';
 import { LandingRoutingModule } from './landing-routing.module';
 import { LandingComponent } from './landing.component';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { LandingComponent } from './landing.component';
     CommonModule,
     LandingRoutingModule,
     LayoutModule,
+    NgxPageScrollModule
   ]
 })
 export class LandingModule { }
