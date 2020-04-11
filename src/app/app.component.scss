@@ -1,0 +1,10 @@
+modal-container {
+    .modal-dialog {
+        .modal-content {
+            background-color: rgba(239,239,239,1.0) !important;
+            .modal-body {
+                padding: 2em !important;
+            }
+        }
+    }
+}

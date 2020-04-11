@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from './modules/layout/layout.module';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
     declarations: [
@@ -12,7 +13,9 @@ import { LayoutModule } from './modules/layout/layout.module';
     imports: [
         AppRoutingModule,
         BrowserModule,
-        LayoutModule
+        LayoutModule,
+        ModalModule.forRoot()
+        
     ],
     providers: [],
     bootstrap: [AppComponent]
