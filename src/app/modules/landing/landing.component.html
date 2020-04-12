@@ -19,14 +19,14 @@
             who could bring innovation to an often antiquated system. Following are open challenges. Let’s do our part
             to fix COVID.
         </p>
-        <div class="button-section d-flex justify-content-around mt-5">
-            <a pageScroll class="btn btn-lg btn-light v-center" [routerLink]="['/home']"
+        <div class="button-section d-flex flex-column flex-lg-row justify-content-around mt-5">
+            <a pageScroll class="btn btn-lg btn-light v-center mb-2" [routerLink]="['/home']"
                 fragment="challenge-feed-a-hero">Feed the
                 Heroes</a>
-            <a pageScroll class="btn btn-lg btn-light" [routerLink]="['/home']"
+            <a pageScroll class="btn btn-lg btn-light mb-2" [routerLink]="['/home']"
                 fragment="challenge-healthcare-system-data">Healthcare
                 System Data</a>
-            <a pageScroll class="btn btn-lg btn-light v-center" [routerLink]="['/home']"
+            <a pageScroll class="btn btn-lg btn-light v-center mb-2" [routerLink]="['/home']"
                 fragment="challenge-covent-19">CoVent-19</a>
         </div>
     </div>
@@ -140,57 +140,6 @@
         </h4>
 
         <h5 class="mb-3 mt-5 section-title text-center text-dark font-weight-bold">Active Challenges</h5>
-
-        <div class="row no-gutters" id="challenge-feed-a-hero">
-            <div class="col-lg-6 order-lg-2 text-white showcase-img">
-                <img class="w-100" src="../../../assets/img/feed-a-hero.png" alt="feed-a-hero">
-            </div>
-            <div class="col-lg-6 order-lg-1 px-3 showcase-text d-flex flex-column">
-                <h2>Feed the Heroes</h2>
-                <p class="lead mb-0 flex-fill">
-                    Build a website that enables individuals, organizations and companies to purchase a meal for a
-                    medical facility or department.
-                </p>
-                <a class="btn btn-lg btn-primary mt-3 text-light" [routerLink]="['/challenge/feed-the-heroes']">Learn
-                    more
-                    <span class="fa fa-chevron-right"></span>
-                </a>
-            </div>
-        </div>
-        <div class="row no-gutters" id="challenge-healthcare-system-data">
-            <div class="col-lg-6 text-white showcase-img">
-                <img class="w-100" src="../../../assets/img/healthcare-system-data.png" alt="healthcare-system-data">
-            </div>
-            <div class="col-lg-6 px-3 showcase-text d-flex flex-column">
-                <h2>Healthcare System Data</h2>
-                <p class="lead mb-0 flex-fill">
-                    Platform 1: track facility data (hospital beds, ventilators, etc.), to power the other innovation
-                    challenges. <br>
-                    Platform 2: track infection, hospital capacity and capability. <br>
-                    Platform 3: epidemiological contact tracing.
-                </p>
-                <a class="btn btn-lg btn-primary mt-3 text-light"
-                    [routerLink]="['/challenge/healthcare-system-data']">Learn more
-                    <span class="fa fa-chevron-right"></span>
-                </a>
-            </div>
-        </div>
-        <div class="row no-gutters" id="challenge-covent-19">
-            <div class="col-lg-6 order-lg-2 text-white showcase-img d-flex"
-                style="background-image: url('../../../assets/img/covent-19.png');">
-                <img class="m-auto" src="../../../assets/img/covent-19-logo.png" alt="covent-19.png">
-            </div>
-            <div class="col-lg-6 order-lg-1 px-3 showcase-text d-flex flex-column">
-                <h2>CoVent-19 Challenge</h2>
-                <p class="lead mb-0 flex-fill">
-                    An Open Innovation Effort to Design a Rapidly Deployable Mechanical Ventilator
-                </p>
-                <a class="btn btn-lg btn-primary mt-3 text-light" target="_blank"
-                    href="https://www.coventchallenge.com/">Learn more
-                    <span class="fa fa-chevron-right"></span>
-                </a>
-            </div>
-        </div>
 
         <div *ngFor="let challenge of (challenges | async); let index = index;" class="row no-gutters"
             [attr.id]="challenge.id">
