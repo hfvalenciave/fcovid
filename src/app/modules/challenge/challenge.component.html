@@ -1,12 +1,13 @@
-<header class="text-dark text-lg-right text-center">
-    <img [src]="(challenge | async).image" class="banner">
+<header class="text-dark text-lg-right text-center" class="header"
+[ngStyle]="{'background-image': 'url('+(challenge | async).home_background+')'}">
+    <img [src]="(challenge | async).image" class="banner m-auto">
 </header>
 <section class="bg-dark">
     <div class="container bg-dark text-center text-white p-5">
         <div class="row">
-            <div class="col-lg-5 col-md-5">
-                <span>
-                    Dates: mm/dd/yyyy- mm/dd/yyyy
+            <div class="col-lg-5 col-md-5 d-flex">
+                <span class="m-auto">
+                    Dates: {{ (challenge | async).start_date }} - {{ (challenge | async).end_date }}
                 </span>
             </div>
             <div class="col-lg-4 col-md-4">
@@ -18,7 +19,7 @@
         </div>
     </div>
 </section>
-<section class="description">
+<section class="description" *ngIf="(challenge | async).long_description.length > 0">
     <div class="container" [innerHTML]="(challenge | async).long_description">
     </div>
 
@@ -28,7 +29,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6">
-                <h4 class="mb-3 mt-5 px-5 text-danger font-weight-bold font-italic" [innerHTML]="(challenge | async).description">
+                <h4 class="mb-3 mt-5 px-5 text-danger font-weight-bold font-italic"
+                    [innerHTML]="(challenge | async).description">
                 </h4>
             </div>
             <div class="col-lg-6 col-md-6">
@@ -43,7 +45,8 @@
                 </ul>
             </div>
         </div>
-        <h5 class="mb-3 mt-5 section-title text-center text-dark font-weight-bold top">This are the different ways you can
+        <h5 class="mb-3 mt-5 section-title text-center text-dark font-weight-bold top">This are the different ways you
+            can
             help</h5>
         <div class="row">
             <div class="col-lg-3 col-md-6 mb-3 mb-lg-0">

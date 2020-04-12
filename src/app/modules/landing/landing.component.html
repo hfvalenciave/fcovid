@@ -194,10 +194,12 @@
 
         <div *ngFor="let challenge of (challenges | async); let index = index;" class="row no-gutters"
             [attr.id]="challenge.id">
-            <div class="col-lg-6 text-white showcase-img d-flex" [ngStyle]="{'background-image': 'url('+challenge.home_background+')',
+            <div class="col-lg-6 text-white showcase-img d-flex"
+                [ngClass]="{'order-lg-2': index % 2 == 0, 'order-lg-1': index % 2 == 1}"
+                [ngStyle]="{'background-image': 'url('+challenge.home_background+')',
                 'background-repeat': 'no-repeat',
                 'background-position': 'center',
-                'background-size': 'cover'}" [ngClass]="{'order-lg-2': index % 2 == 0, 'order-lg-1': index % 2 == 1}">
+                'background-size': 'cover'}">
                 <img [ngClass]="challenge.home_background != null ? 'm-auto' : 'w-100'" [src]="challenge.home_image"
                     alt="challenge.id">
             </div>

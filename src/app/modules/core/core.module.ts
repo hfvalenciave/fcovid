@@ -1,13 +1,13 @@
-import { ChallengeService } from './services/challenge/challenge.service';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+
+import { ChallengeService } from './services/challenge/challenge.service';
 
 
 
 @NgModule({
     declarations: [],
     exports: [
-        ChallengeService
     ],
     imports: [
         CommonModule
