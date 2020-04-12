@@ -151,7 +151,8 @@
                     Build a website that enables individuals, organizations and companies to purchase a meal for a
                     medical facility or department.
                 </p>
-                <a class="btn btn-lg btn-primary mt-3 text-light" [routerLink]="['/challenge']">Learn more
+                <a class="btn btn-lg btn-primary mt-3 text-light" [routerLink]="['/challenge/feed-the-heroes']">Learn
+                    more
                     <span class="fa fa-chevron-right"></span>
                 </a>
             </div>
@@ -168,7 +169,8 @@
                     Platform 2: track infection, hospital capacity and capability. <br>
                     Platform 3: epidemiological contact tracing.
                 </p>
-                <a class="btn btn-lg btn-primary mt-3 text-light" [routerLink]="['/challenge']">Learn more
+                <a class="btn btn-lg btn-primary mt-3 text-light"
+                    [routerLink]="['/challenge/healthcare-system-data']">Learn more
                     <span class="fa fa-chevron-right"></span>
                 </a>
             </div>
@@ -185,6 +187,33 @@
                 </p>
                 <a class="btn btn-lg btn-primary mt-3 text-light" target="_blank"
                     href="https://www.coventchallenge.com/">Learn more
+                    <span class="fa fa-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+
+        <div *ngFor="let challenge of (challenges | async); let index = index;" class="row no-gutters"
+            [attr.id]="challenge.id">
+            <div class="col-lg-6 text-white showcase-img d-flex" [ngStyle]="{'background-image': 'url('+challenge.home_background+')',
+                'background-repeat': 'no-repeat',
+                'background-position': 'center',
+                'background-size': 'cover'}" [ngClass]="{'order-lg-2': index % 2 == 0, 'order-lg-1': index % 2 == 1}">
+                <img [ngClass]="challenge.home_background != null ? 'm-auto' : 'w-100'" [src]="challenge.home_image"
+                    alt="challenge.id">
+            </div>
+            <div class="col-lg-6 px-3 showcase-text d-flex flex-column"
+                [ngClass]="{'order-lg-2': index % 2 == 1, 'order-lg-1': index % 2 == 0}">
+                <h2>{{ challenge.title }}</h2>
+                <p class="lead mb-0 flex-fill" [innerHTML]="challenge.description">
+                </p>
+                <a *ngIf="challenge.type == 'internal'" class="btn btn-lg btn-primary mt-3 text-light"
+                    [routerLink]="['/challenge', challenge.id]">
+                    Learn more
+                    <span class="fa fa-chevron-right"></span>
+                </a>
+                <a *ngIf="challenge.type == 'external'" class="btn btn-lg btn-primary mt-3 text-light"
+                    [href]="challenge.url" target="_blank">
+                    Learn more
                     <span class="fa fa-chevron-right"></span>
                 </a>
             </div>

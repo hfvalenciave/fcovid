@@ -6,7 +6,7 @@ import { ChallengeComponent } from './challenge.component';
 
 const routes: Routes = [
     {
-        path: '',
+        path: ':idChallenge',
         component: ChallengeComponent
     }
 ];

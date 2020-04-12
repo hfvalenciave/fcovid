@@ -1,15 +1,18 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ChallengeComponent } from './challenge.component';
+import { NgModule } from '@angular/core';
+
+import { CoreModule } from './../core/core.module';
 import { ChallengeRoutingModule } from './challenge-routing.module';
+import { ChallengeComponent } from './challenge.component';
 
 
 
 @NgModule({
-  declarations: [ChallengeComponent],
-  imports: [
-    CommonModule,
-    ChallengeRoutingModule
-  ]
+    declarations: [ChallengeComponent],
+    imports: [
+        ChallengeRoutingModule,
+        CommonModule,
+        CoreModule
+    ]
 })
 export class ChallengeModule { }

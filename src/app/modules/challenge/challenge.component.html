@@ -1,5 +1,5 @@
 <header class="text-dark text-lg-right text-center">
-    <img src="../../../assets/img/FeedAHero.png" class="banner">
+    <img [src]="(challenge | async).image" class="banner">
 </header>
 <section class="bg-dark">
     <div class="container bg-dark text-center text-white p-5">
@@ -19,11 +19,7 @@
     </div>
 </section>
 <section class="description">
-    <div class="container">
-        <h3>Healthcare professionals around the world work long hours in difficult conditions to care for COVID-19 patients.
-            And they need our help.</h3>
-        <p>During a 12-24 hour shift, workers often cannot stop to eat a real meal so Feed The Heroes is dedicated to keeping valuable medical teams fed. With the this initiative, some economically-challenged restaurants could rehire laid-off staff to prepare the food necessary to keep medical professionals
-        healthy and working.</p>
+    <div class="container" [innerHTML]="(challenge | async).long_description">
     </div>
 
 </section>
@@ -32,18 +28,18 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6">
-                <h4 class="mb-3 mt-5 px-5 text-danger font-weight-bold font-italic">
-                    Build a website that enables individuals, organizations and companies to purchase a meal for a medical facility or department
+                <h4 class="mb-3 mt-5 px-5 text-danger font-weight-bold font-italic" [innerHTML]="(challenge | async).description">
                 </h4>
             </div>
             <div class="col-lg-6 col-md-6">
                 <ul>
-                    <li>Database of available hospitals, nursing units and clinics in a geographic region</li>
+                    <li *ngFor="let item of (challenge | async ).points">{{ item }}</li>
+                    <!-- <li>Database of available hospitals, nursing units and clinics in a geographic region</li>
                     <li>Start with cities that are most deeply affected by COVID19 today</li>
                     <li>How to purchase food and schedule delivery (morning, afternoon and night shifts)</li>
                     <li>How to determine headcount and delivery location</li>
                     <li>Arrange for delivery with a partnership, for example UberEats, DoorDash or other platforms</li>
-                    <li>The website is easily translatable into different languages</li>
+                    <li>The website is easily translatable into different languages</li> -->
                 </ul>
             </div>
         </div>
