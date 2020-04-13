@@ -9,6 +9,7 @@ import { MainComponent } from './components/main/main.component';
 import { SponsorSectionComponent } from './components/sponsor-section/sponsor-section.component';
 import { ContactModalComponent } from './components/contact-modal/contact-modal.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -30,7 +31,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
         CommonModule,
         NgxPageScrollModule,
         RouterModule,
-        ModalModule.forRoot()
+        ModalModule.forRoot(),
+        ReactiveFormsModule,
+        FormsModule,
     ],
     entryComponents: 
     [

@@ -1,47 +1,64 @@
   <div class="modal-body">
-    <form>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
         <div class="form-group">
           <label for="exampleFormControlInput0">Full Name</label>
-          <input type="text" class="form-control" id="exampleFormControlInput0">
+          <input formControlName="fullname" type="text" class="form-control" id="exampleFormControlInput0">
+          <div *ngIf="contactForm.get('fullname').errors && contactForm.get('fullname').dirty && contactForm.get('fullname').touched" class="error">
+            <p *ngIf="contactForm.get('fullname').hasError('required')">Field is requiered</p>
+          </div>
         </div>
         <div class="form-group">
             <label for="exampleFormControlInput1">e-mail</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-          </div>
+            <input formControlName="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <div *ngIf="contactForm.get('email').errors && contactForm.get('email').dirty && contactForm.get('email').touched" class="error">
+              <p *ngIf="contactForm.get('email').hasError('required')">Field is requiered</p>
+              <p *ngIf="contactForm.get('email').hasError('email')">Invalid format email</p>
+            </div>
+        </div>
         <div class="form-group">
           <label for="exampleFormControlSelect1">I am a:</label>
-          <select class="form-control" id="exampleFormControlSelect1">
+          <select formControlName="iAmA" class="form-control" id="exampleFormControlSelect1">
+            <option value="">Select</option>
             <option>1</option>
             <option>2</option>
             <option>3</option>
             <option>4</option>
             <option>5</option>
           </select>
+          <div *ngIf="contactForm.get('iAmA').errors && contactForm.get('iAmA').dirty && contactForm.get('iAmA').touched" class="error">
+            <p *ngIf="contactForm.get('iAmA').hasError('required')">Field is requiered</p>
+          </div>
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1">I am interested in:</label>
             <div class="form-check">
-                <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="optradio">Feed the Heroes Challenge
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="optradio">Healthcare System Data
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="optradio">CoVent-19 Challenge
-                </label>
-              </div>
-          </div>
+              <label class="form-check-label">
+                <input formControlName="interestedIn" type="radio" class="form-check-input" value="Feed the Heroes Challenge" name="interestedIn">Feed the Heroes Challenge
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input formControlName="interestedIn" type="radio" class="form-check-input" value="Healthcare System Data" name="interestedIn">Healthcare System Data
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input formControlName="interestedIn" type="radio" class="form-check-input" value="CoVent-19 Challenge" name="interestedIn">CoVent-19 Challenge
+              </label>
+            </div>
+            <div *ngIf="contactForm.get('interestedIn').errors && contactForm.get('interestedIn').dirty && contactForm.get('interestedIn').touched" class="error">
+              <p *ngIf="contactForm.get('interestedIn').hasError('required')">Field is requiered</p>
+            </div>
+        </div>
         <div class="form-group">
           <label for="exampleFormControlTextarea1">SubmitI want to help with:</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea formControlName="readonlyHelpWith" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <div *ngIf="contactForm.get('readonlyHelpWith').errors && contactForm.get('readonlyHelpWith').dirty && contactForm.get('readonlyHelpWith').touched" class="error">
+            <p *ngIf="contactForm.get('readonlyHelpWith').hasError('required')">Field is requiered</p>
+          </div>
         </div>
-      </form>
+    </form>
   </div>
   <div class="modal-footer">
-    <a class="btn btn-primary" href="#">Submit</a>
+    <button class="btn btn-primary" type="submit" [disabled]="contactForm.invalid">Submit</button>
   </div>

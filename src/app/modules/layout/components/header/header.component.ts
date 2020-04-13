@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  click() {
+  showModal() {
     const initialState = {
       list: [
         'Open a modal with component',
