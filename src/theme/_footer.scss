@@ -1,6 +1,10 @@
 footer.footer {
-    padding-top: 4rem;
+    padding-top: 1rem;
     padding-bottom: 1rem;
+    .space {
+        padding-bottom: 1em;
+        padding-top: 1em;
+    }
     &.bg-dark {
         a {
             color: $light !important;

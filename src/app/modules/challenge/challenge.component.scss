@@ -9,6 +9,9 @@
     .banner {
         width: auto;
     }
+    .full {
+        width: 100%;
+    }
     .bg-dark {
         span {
             opacity: 1;
@@ -18,30 +21,32 @@
             font-size: 21px;
         }
     }
-    .description-challenge {
-        background-color: rgba(239, 239, 239, 1);
-        top: 0;
-        height: 278px;
-        padding: 3rem;
-        text-align: center;
-        h3 {
-            line-height: 19px;
-            font-family: "Montserrat", Helvetica, Arial, serif;
-            font-weight: 600;
-            font-style: normal;
-            font-size: 16px;
-            color: rgba(47, 54, 75, 1);
+    ::ng-deep {
+        .description-challenge {
+            background-color: rgba(239, 239, 239, 1);
+            top: 0;
+            height: 278px;
+            padding: 3rem;
             text-align: center;
-            padding-bottom: 4%;
-        }
-        p {
-            font-family: "Montserrat", Helvetica, Arial, serif;
-            font-weight: 500;
-            font-style: normal;
-            font-size: 14px;
-            line-height: 18px;
-            text-align: center;
-            color: rgba(47, 54, 75, 1);
+            h3 {
+                line-height: 19px;
+                font-family: "Montserrat", Helvetica, Arial, serif;
+                font-weight: 600;
+                font-style: normal;
+                font-size: 16px;
+                color: rgba(47, 54, 75, 1);
+                text-align: center;
+                padding-bottom: 4%;
+            }
+            p {
+                font-family: "Montserrat", Helvetica, Arial, serif;
+                font-weight: 500;
+                font-style: normal;
+                font-size: 14px;
+                line-height: 18px;
+                text-align: center;
+                color: rgba(47, 54, 75, 1);
+            }
         }
     }
     .space {
@@ -50,8 +55,9 @@
             font-weight: 800;
             font-style: normal;
             font-size: 16px;
-            color: rgba(255, 255, 255, 1);
+            color: rgba(255, 255, 255, 1) !important;
             text-align: center;
+            margin-top: 0 !important;
         }
     }
     .top {
@@ -69,5 +75,7 @@
     }
     h4 {
         line-height: 50px;
+        color: rgba(230,114,112,1.0) !important;
+        margin-top: 16% !important;
     }
 }

@@ -12,8 +12,8 @@ export const CHALLENGES = [
         description: `Build a website that enables individuals,
                     organizations and companies to purchase a meal for a medical facility or department`,
         long_description: `<h3>Healthcare professionals around the world work long hours in difficult conditions
-            to care for COVID-19 patients. And they need our help.</h3>
-            <p>During a 12-24 hour shift, workers often cannot stop to eat a real meal so Feed The Heroes is dedicated
+            to care for COVID-19 patients.<br/> And they need our help.</h3>
+            <p>During a 12-24 hour shift, workers often cannot stop to eat a real meal so <strong>Feed The Heroes </strong> is dedicated
             to keeping valuable medical teams fed. With the this initiative, some economically-challenged restaurants could
             rehire laid-off staff to prepare the food necessary to keep medical professionals healthy and working.</p>
 `,
