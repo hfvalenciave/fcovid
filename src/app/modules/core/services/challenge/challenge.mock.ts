@@ -9,8 +9,8 @@ export const CHALLENGES = [
         home_background: '../../../assets/img/feed-a-hero-background.png',
         image: '../../../assets/img/feed-a-hero.png',
         background: '../../../assets/img/feed-a-hero-background.png',
-        description: `Build a website that enables individuals,
-                    organizations and companies to purchase a meal for a medical facility or department`,
+        description: `A website to allow individuals and organizations to
+            purchase meals for hospital departments or entire medical facilities.`,
         long_description: `<h3>Healthcare professionals around the world work long hours in difficult conditions
             to care for COVID-19 patients.<br/> And they need our help.</h3>
             <p>During a 12-24 hour shift, workers often cannot stop to eat a real meal so <strong>Feed The Heroes </strong> is dedicated
@@ -38,9 +38,10 @@ export const CHALLENGES = [
         background: '../../../assets/img/healthcare-system-data-background.png',
         description: `
         <ul>
-            <li>Platform 1: track facility data (hospital beds, ventilators, etc.), to power the other innovation challenges.</li>
-            <li>Platform 2: track infection, hospital capacity and capability.</li>
-            <li>Platform 3: epidemiological contact tracing.</li>
+            <li>Platforms to track data:</li>
+            <li>Facility: such as hospital beds and ventilators to power all innovation challenges.</li>
+            <li>Infection: like rate of infection, hospital capacity and capability.
+            Epidemiology: contact tracing</li>
         </ul>`,
         long_description: ``
     },
