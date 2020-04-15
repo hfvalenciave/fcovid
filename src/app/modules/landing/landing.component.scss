@@ -11,18 +11,23 @@
 
         .mini-logo {
             font-size: 15px;
-            font-weight: 600;
+            font-weight: 500;
 
             img {
-                height: 12px;
+                height: 15px;
+                margin-bottom: 6px;
             }
         }
 
         p {
-            font-size: 1.3rem;
-            font-weight: 600;
+            font-size: 1.4rem;
+            font-weight: 500;
             margin-top: 15px;
         }
+    }
+
+    h6 {
+        font-weight: 600;
     }
 
     .button-section {

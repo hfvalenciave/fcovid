@@ -37,7 +37,7 @@ export const CHALLENGES = [
         image: '../../../assets/img/healthcare-system-data.png',
         background: '../../../assets/img/healthcare-system-data-background.png',
         description: `
-        <ul>
+        <ul class="list-unstyled">
             <li>Platforms to track data:</li>
             <li>Facility: such as hospital beds and ventilators to power all innovation challenges.</li>
             <li>Infection: like rate of infection, hospital capacity and capability.

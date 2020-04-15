@@ -5,7 +5,7 @@
             <div class="col-lg-6 offset-lg-6 col-sm-8 offset-sm-2 pr-0">
                 <span class="mini-logo">by <img src="../../../../../assets/img/hf-logo.png" alt="hf-logo"> &
                     <img src="../../../../../assets/img/hack-fund-logo.png" alt="hack-fund-logo"></span>
-                <p class="align-right">Hackers and Founders fixing COVID-19</p>
+                <p class="align-right">Hackers and Founders fighting COVID-19</p>
             </div>
         </div>
     </div>
@@ -14,10 +14,10 @@
 <section class="description bg-dark">
     <div class="container bg-dark text-center text-white p-5" id="general-description">
         <p class="lead mb-0">
-            COVID-19 is a once-in-a-century pandemic, likely to infect millions. Our healthcare heroes are working long
+            COVID-19 is a once-in-a-century pandemic likely to infect millions. Our healthcare heroes are working long
             hours in difficult conditions to save lives. And they need the help of brilliant hackers and entrepreneurs
-            who could bring innovation to an often antiquated system. Following are open challenges. Let’s do our part
-            to fix COVID.
+            who can bring innovation to an often antiquated system. Following are open challenges. Let’s do our part to
+            fight COVID-19 worldwide.
         </p>
         <div class="button-section d-flex flex-column flex-lg-row justify-content-around mt-5">
             <a pageScroll class="btn btn-lg btn-light v-center mb-2" [routerLink]="['/home']"
@@ -35,7 +35,8 @@
 <section class="features-icons text-center">
     <div class="container">
         <h4 class="mb-3 mt-5 px-5 text-danger font-weight-bold font-italic">
-            If there is anything innovation-driven hackers and founders know how to do, it is achieving the impossible with scarce resources.
+            If there is anything innovation-driven hackers and founders know how to do, it is achieving the impossible
+            with scarce resources.
         </h4>
         <h5 class="mb-4 pb-2 mt-5 section-title text-center text-dark font-weight-bold">How to Participate</h5>
         <div class="row">
@@ -92,7 +93,7 @@
                         <i class="icon-check m-auto text-primary"></i>
                     </div> -->
                     <!-- <h3>Donate</h3> -->
-                    <h6>teamAdvisors</h6>
+                    <h6>Advisors</h6>
                     <p class="lead mb-0 flex-fill">
                         Seeking experts to provide context and guidance for Innovation Challenges.
                     </p>
@@ -157,12 +158,12 @@
                 <p class="lead mb-0 flex-fill" [innerHTML]="challenge.description">
                 </p>
                 <a *ngIf="challenge.type == 'internal'" class="btn btn-lg btn-primary mt-3 text-light"
-                    [routerLink]="['/challenge', challenge.id]">
+                    style="max-width: 250px;" [routerLink]="['/challenge', challenge.id]">
                     Learn more
                     <span class="fa fa-chevron-right"></span>
                 </a>
                 <a *ngIf="challenge.type == 'external'" class="btn btn-lg btn-primary mt-3 text-light"
-                    [href]="challenge.url" target="_blank">
+                    style="max-width: 250px;" [href]="challenge.url" target="_blank">
                     Learn more
                     <span class="fa fa-chevron-right"></span>
                 </a>
