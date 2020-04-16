@@ -3,11 +3,11 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
 
 @Component({
-  selector: 'app-contact-modal',
-  templateUrl: './contact-modal.component.html',
-  styleUrls: ['./contact-modal.component.scss']
+  selector: 'app-contact-team-modal',
+  templateUrl: './contact-team-modal.component.html',
+  styleUrls: ['./contact-team-modal.component.scss']
 })
-export class ContactModalComponent {
+export class ContactTeamModalComponent implements OnInit {
   title: string;
   closeBtnName: string;
   list: any[] = [];
@@ -16,12 +16,14 @@ export class ContactModalComponent {
  
   constructor(public bsModalRef: BsModalRef, public fb: FormBuilder) {
     this.contactForm = this.fb.group({
-      profession: [''],
-      comments: ['', [Validators.required]],
-      fullname: [''],
-      email: ['', [Validators.required]],
-      phone: [''],
-      timeZone: [''],
+      fullname: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      country: ['', [Validators.required]],
+      phone: ['', [Validators.required]],
+      profession: ['', [Validators.required]],
+      bestContact: ['', [Validators.required]],
+      areas: ['', [Validators.required]],
+      howWould: ['', [Validators.required]],
     });
   }
 
@@ -37,6 +39,4 @@ export class ContactModalComponent {
       console.log('form submitted');
   }
 
-
 }
-

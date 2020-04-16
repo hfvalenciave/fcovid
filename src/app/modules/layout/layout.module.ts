@@ -10,6 +10,8 @@ import { SponsorSectionComponent } from './components/sponsor-section/sponsor-se
 import { ContactModalComponent } from './components/contact-modal/contact-modal.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ParticipateModalComponent } from './components/participate-modal/participate-modal.component';
+import { ContactTeamModalComponent } from './components/contact-team-modal/contact-team-modal.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         HeaderComponent,
         MainComponent,
         SponsorSectionComponent,
-        ContactModalComponent
+        ContactModalComponent,
+        ParticipateModalComponent,
+        ContactTeamModalComponent
     ],
     exports: [
         FooterComponent,
@@ -37,7 +41,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ],
     entryComponents: 
     [
-        ContactModalComponent
+        ContactModalComponent,
+        ParticipateModalComponent,
+        ContactTeamModalComponent
     ]
 })
 export class LayoutModule { }

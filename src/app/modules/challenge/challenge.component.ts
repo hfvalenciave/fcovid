@@ -5,6 +5,8 @@ import { ContactModalComponent } from '../layout/components/contact-modal/contac
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { ChallengeService } from './../core/services/challenge/challenge.service';
 import { isNullOrUndefined } from 'util';
+import { ParticipateModalComponent } from '../layout/components/participate-modal/participate-modal.component';
+import { ContactTeamModalComponent } from '../layout/components/contact-team-modal/contact-team-modal.component';
 
 @Component({
     selector: 'app-challenge',
@@ -20,25 +22,52 @@ export class ChallengeComponent implements OnInit {
 
     ngOnInit() {
         this.route.params.subscribe(params => {
-            console.log('nano')
             if (!isNullOrUndefined(params.idChallenge)) {
                 this.challenge = this.challegeService.findById(params.idChallenge);
             }
         });
     }
 
-    showModal() {
-        const initialState = {
-          list: [
-            'Open a modal with component',
-            'Pass your data',
-            'Do something else',
-            '...'
-          ],
-          title: 'Modal with component'
-        };
-        this.bsModalRef = this.modalService.show(ContactModalComponent, {initialState});
-        this.bsModalRef.content.closeBtnName = 'Close';
-      }
+    showModalAnonymous() {
+      const initialState = {
+        list: [
+          'Open a modal with component',
+          'Pass your data',
+          'Do something else',
+          '...'
+        ],
+        title: 'Modal with component'
+      };
+      this.bsModalRef = this.modalService.show(ContactModalComponent, {initialState});
+      this.bsModalRef.content.closeBtnName = 'Close';
+  }
+
+  showModalParticipate() {
+    const initialState = {
+      list: [
+        'Open a modal with component',
+        'Pass your data',
+        'Do something else',
+        '...'
+      ],
+      title: 'Modal with component'
+    };
+    this.bsModalRef = this.modalService.show(ParticipateModalComponent, {initialState});
+    this.bsModalRef.content.closeBtnName = 'Close';
+  }
+
+  showModalAdvisors() {
+    const initialState = {
+      list: [
+        'Open a modal with component',
+        'Pass your data',
+        'Do something else',
+        '...'
+      ],
+      title: 'Modal with component'
+    };
+    this.bsModalRef = this.modalService.show(ContactTeamModalComponent, {initialState});
+    this.bsModalRef.content.closeBtnName = 'Close';
+  }
 
 }

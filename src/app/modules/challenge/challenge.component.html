@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-lg-5 col-md-5 d-flex">
                 <span class="m-auto">
-                    Dates: {{ (challenge | async).start_date }} - {{ (challenge | async).end_date }}
+                    Status: {{ (challenge | async).status }}
                 </span>
             </div>
             <div class="col-lg-4 col-md-4">
@@ -45,7 +45,7 @@
                 </ul>
             </div>
         </div>
-        <h5 class="mb-3 mt-5 section-title text-center text-dark font-weight-bold top">How to Participatep</h5>
+        <h5 class="mb-3 mt-5 section-title text-center text-dark font-weight-bold top">How to Participate</h5>
         <div class="row">
             <div class="col-lg-3 col-md-6 mb-3 mb-lg-0">
                 <div
@@ -56,7 +56,7 @@
                         If you would like to speak directly to the people building solutions, please complete the
                         optional contact information.
                     </p>
-                    <button class="btn btn-primary" (click)="showModal()">Contact FCOVID team</button>
+                    <button class="btn btn-primary" (click)="showModalAnonymous()">Fill Anonymous form</button>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-3 mb-lg-0">
@@ -66,7 +66,7 @@
                     <p class="lead mb-0 flex-fill">
                         We welcome developers, designers, business development professionals, project managers and more to participate in hackathons to be announced.
                     </p>
-                    <button class="btn btn-primary" (click)="showModal()">Participate</button>
+                    <button class="btn btn-primary" (click)="showModalParticipate()">Participate</button>
                 </div>
             </div>
 
@@ -79,7 +79,7 @@
                         Areas of interest include healthcare administration; hardware and software; medical equipment;
                         legal; governmental, economic and environmental policy; and more.
                     </p>
-                    <button class="btn btn-primary" (click)="showModal()">Contact FCOVID team</button>
+                    <button class="btn btn-primary" (click)="showModalAdvisors()">Contact FCOVID team</button>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-3 mb-lg-0">
