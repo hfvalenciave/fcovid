@@ -1,10 +1,9 @@
 <!-- Masthead -->
 <header class="text-dark text-lg-right text-center">
     <div class="container">
-        <div class="row masthead">
-            <div class="col-lg-6 offset-lg-6 col-sm-8 offset-sm-2 pr-0">
-                <span class="mini-logo">by <img src="../../../../../assets/img/hf-logo.png" alt="hf-logo"> &
-                    <img src="../../../../../assets/img/hack-fund-logo.png" alt="hack-fund-logo"></span>
+        <div class="masthead position-relative">
+            <div class="masthead-left"></div>
+            <div class="masthead-right">
                 <p class="align-right">Hackers and Founders fighting COVID-19</p>
             </div>
         </div>
@@ -110,7 +109,7 @@
 </section>
 
 <section class="py-5">
-    <div class="container px-5">
+    <div class="container">
         <h5 class="mb-4 pb-2  section-title text-center font-weight-bold">About FCOVID</h5>
         <div class="row no-gutters">
             <div class="col-lg-6 text-right">
@@ -137,7 +136,7 @@
 </section>
 
 <section class="showcase">
-    <div class="container px-5">
+    <div class="container">
         <!-- <h4 class="mb-3 mt-5 px-5 text-center text-danger font-weight-bold font-italic">
             We build. We measure. We improve. We improvise. We overcome.
         </h4> -->
@@ -153,7 +152,8 @@
                 <img [ngClass]="challenge.home_background != null ? 'm-auto' : 'w-100'" [src]="challenge.home_image"
                     alt="challenge.id">
             </div>
-            <div class="col-lg-6 px-3 showcase-text d-flex flex-column order-lg-2">
+            <div
+                class="align-items-center align-items-md-start col-lg-6 d-flex flex-column order-lg-2 px-3 showcase-text text-center text-md-left">
                 <h2 class="mb-5">{{ challenge.title }}</h2>
                 <p class="lead mb-0 flex-fill" [innerHTML]="challenge.description">
                 </p>

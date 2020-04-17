@@ -1,10 +1,10 @@
 <!-- Navigation -->
 <nav class="navbar navbar-dark bg-dark static-top">
-    <div class="container">
-        <a class="navbar-brand" [routerLink]="['/']">
+    <div class="container-md container-fluid mx-md-auto mx-sm-0">
+        <a class="navbar-brand flex-fill" [routerLink]="['/']">
             <img class="logo" src="../../../../../assets/img/logo-white.png" alt="F/CODIV">
         </a>
-        <div class="m-0 p-0">
+        <div class="m-0 p-0 d-none d-md-block">
             <a pageScroll class="d-none d-md-inline-block text-light mr-5" [routerLink]="['/home']"
                 fragment="general-description"> About Us </a>
             <div class="dropdown mr-5">
@@ -14,9 +14,27 @@
                     <a [routerLink]="['/challenge/healthcare-system-data']"> Healthcare System Data </a>
                     <a href="https://www.coventchallenge.com/" target="_blank"> CoVent-19 </a>
                 </div>
-              </div>
+            </div>
             <!-- <a class="btn btn-light d-none d-md-inline-block mx-3" (click)="showModal()">I want to participate</a> -->
             <a class="btn btn-light space" href="#">Donate</a>
+        </div>
+        <div class="btn-group d-block d-md-none">
+            <button type="button" class="btn bg-transparent border-0 text-light btn-menu-mobile"
+                (click)="showMenu = !showMenu">
+                <i class="fa fa-bars" [ngClass]="{'fa-bars': !showMenu, 'fa-times': showMenu}"></i>
+            </button>
+            <div class="d-flex dropdown-mobile flex-column p-2" *ngIf="showMenu">
+                <a pageScroll class="dropdown-item" [routerLink]="['/home']" fragment="general-description" (click)="close()"> About Us
+                </a>
+                <label class="dropdown-item">Challenges</label>
+                <div class="ml-3">
+                    <a class="dropdown-item" [routerLink]="['/challenge/feed-the-heroes']" (click)="close()"> Feed the heroes </a>
+                    <a class="dropdown-item" [routerLink]="['/challenge/healthcare-system-data']" (click)="close()"> Healthcare System
+                        Data </a>
+                    <a class="dropdown-item" href="https://www.coventchallenge.com/" target="_blank"> CoVent-19 </a>
+                </div>
+                <a class="btn btn-primary mb-3 mt-4 mx-auto space" href="#" (click)="close()">Donate</a>
+            </div>
         </div>
     </div>
 </nav>
