@@ -1,4 +1,5 @@
-<div class="modal-header">
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="modal-header">
     <button type="button" class="close pull-right" aria-label="Close" (click)="hideModal()">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -7,80 +8,80 @@
     <h5 class="modal-title pull-left" id="my-modal-title">Hackers and Entrepreneurs
     </h5>
     <h6><strong>Contact Information</strong></h6>
-    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
-        <div class="form-group">
-            <label for="exampleFormControlInput0">Full Name</label>
-            <input formControlName="fullname" type="text" class="form-control" id="exampleFormControlInput0">
-            <div *ngIf="contactForm.get('fullname').errors && contactForm.get('fullname').dirty || contactForm.get('fullname').touched" class="error">
-              <p *ngIf="contactForm.get('fullname').hasError('required')">Field is requiered</p>
-            </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput0">Full Name</label>
+        <input formControlName="fullname" type="text" class="form-control" id="exampleFormControlInput0">
+        <div *ngIf="contactForm.get('fullname').errors && contactForm.get('fullname').dirty || contactForm.get('fullname').touched" class="error">
+          <p *ngIf="contactForm.get('fullname').hasError('required')">Field is requiered</p>
         </div>
-        <div class="form-group">
-            <label for="exampleFormControlInput1">Email</label>
-            <input formControlName="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-            <div *ngIf="contactForm.get('email').errors && contactForm.get('email').dirty || contactForm.get('email').touched" class="error">
-              <p *ngIf="contactForm.get('email').hasError('required')">Field is requiered</p>
-              <p *ngIf="contactForm.get('email').hasError('email')">Invalid format email</p>
-            </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Email</label>
+        <input formControlName="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <div *ngIf="contactForm.get('email').errors && contactForm.get('email').dirty || contactForm.get('email').touched" class="error">
+          <p *ngIf="contactForm.get('email').hasError('required')">Field is requiered</p>
+          <p *ngIf="contactForm.get('email').hasError('email')">Invalid format email</p>
         </div>
-        <div class="form-group">
-            <label for="exampleFormControlInput0">Country</label>
-            <input formControlName="country" type="text" class="form-control" id="exampleFormControlInput0">
-            <div *ngIf="contactForm.get('country').errors && contactForm.get('country').dirty || contactForm.get('country').touched" class="error">
-              <p *ngIf="contactForm.get('country').hasError('required')">Field is requiered</p>
-            </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput0">Country</label>
+        <input formControlName="country" type="text" class="form-control" id="exampleFormControlInput0">
+        <div *ngIf="contactForm.get('country').errors && contactForm.get('country').dirty || contactForm.get('country').touched" class="error">
+          <p *ngIf="contactForm.get('country').hasError('required')">Field is requiered</p>
         </div>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Phone</label>
-          <input formControlName="phone" type="text" class="form-control" id="exampleFormControlInput1">
-          <div *ngIf="contactForm.get('phone').errors && contactForm.get('phone').dirty && contactForm.get('phone').touched" class="error">
-            <p *ngIf="contactForm.get('phone').hasError('required')">Field is requiered</p>
-          </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Phone</label>
+      <input formControlName="phone" type="text" class="form-control" id="exampleFormControlInput1">
+      <div *ngIf="contactForm.get('phone').errors && contactForm.get('phone').dirty && contactForm.get('phone').touched" class="error">
+        <p *ngIf="contactForm.get('phone').hasError('required')">Field is requiered</p>
+      </div>
+    </div>
+    <h6><strong>TEAM/PROJECT</strong></h6>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Do you work on a team or by yourself?</label>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input formControlName="teams" type="radio" class="form-check-input" value="On a team" name="teams">Feed the Heroes Challenge
+          </label>
         </div>
-        <h6><strong>TEAM/PROJECT</strong></h6>
-        <div class="form-group">
-            <label for="exampleFormControlSelect1">Do you work on a team or by yourself?</label>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input formControlName="teams" type="radio" class="form-check-input" value="On a team" name="teams">Feed the Heroes Challenge
-              </label>
-            </div>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input formControlName="teams" type="radio" class="form-check-input" value="By myself" name="teams">Healthcare System Data
-              </label>
-            </div>
-            <div *ngIf="contactForm.get('teams').errors && contactForm.get('teams').dirty || contactForm.get('teams').touched" class="error">
-              <p *ngIf="contactForm.get('teams').hasError('required')">Field is requiered</p>
-            </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input formControlName="teams" type="radio" class="form-check-input" value="By myself" name="teams">Healthcare System Data
+          </label>
         </div>
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Please name your areas of expertise</label>
-          <textarea formControlName="areas" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          <div *ngIf="contactForm.get('areas').errors && contactForm.get('areas').dirty || contactForm.get('areas').touched" class="error">
-            <p *ngIf="contactForm.get('areas').hasError('required')">Field is requiered</p>
-          </div>
+        <div *ngIf="contactForm.get('teams').errors && contactForm.get('teams').dirty || contactForm.get('teams').touched" class="error">
+          <p *ngIf="contactForm.get('teams').hasError('required')">Field is requiered</p>
         </div>
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Please describe your potential product</label>
-            <textarea formControlName="descriptionProduct" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            <div *ngIf="contactForm.get('descriptionProduct').errors && contactForm.get('descriptionProduct').dirty || contactForm.get('descriptionProduct').touched" class="error">
-              <p *ngIf="contactForm.get('descriptionProduct').hasError('required')">Field is requiered</p>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlTextarea1">Additional Comments</label>
-            <textarea formControlName="additionalComments" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            <div *ngIf="contactForm.get('additionalComments').errors && contactForm.get('additionalComments').dirty || contactForm.get('additionalComments').touched" class="error">
-              <p *ngIf="contactForm.get('additionalComments').hasError('required')">Field is requiered</p>
-            </div>
-          </div>
-        <p>SubmitThank you for your interest in supporting those on the front lines of the
-            COVID-19 battle. We will be in touch as soon as possible. In the
-            meantime, if you have any questions, please contact us at (fcovid@hf.cx),
-            the F/COVID Team. </p>
-    </form>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Please name your areas of expertise</label>
+      <textarea formControlName="areas" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <div *ngIf="contactForm.get('areas').errors && contactForm.get('areas').dirty || contactForm.get('areas').touched" class="error">
+        <p *ngIf="contactForm.get('areas').hasError('required')">Field is requiered</p>
+      </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Please describe your potential product</label>
+        <textarea formControlName="descriptionProduct" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <div *ngIf="contactForm.get('descriptionProduct').errors && contactForm.get('descriptionProduct').dirty || contactForm.get('descriptionProduct').touched" class="error">
+          <p *ngIf="contactForm.get('descriptionProduct').hasError('required')">Field is requiered</p>
+        </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Additional Comments</label>
+      <textarea formControlName="additionalComments" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <div *ngIf="contactForm.get('additionalComments').errors && contactForm.get('additionalComments').dirty || contactForm.get('additionalComments').touched" class="error">
+        <p *ngIf="contactForm.get('additionalComments').hasError('required')">Field is requiered</p>
+      </div>
+    </div>
+    <p>SubmitThank you for your interest in supporting those on the front lines of the
+        COVID-19 battle. We will be in touch as soon as possible. In the
+        meantime, if you have any questions, please contact us at (fcovid@hf.cx),
+        the F/COVID Team. 
+    </p>
   </div>
   <div class="modal-footer">
     <button class="btn btn-primary" type="submit" [disabled]="contactForm.invalid">Submit</button>
   </div>
+</form>

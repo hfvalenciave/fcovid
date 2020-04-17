@@ -34,14 +34,20 @@ export const CHALLENGES = [
         home_background: '../../../assets/img/healthcare-system-data-background.png',
         image: '../../../assets/img/healthcare-system-data.png',
         background: '../../../assets/img/healthcare-system-data-background.png',
-        description: `
-        <ul class="list-unstyled">
-            <li>Platforms to track data:</li>
-            <li>Facility: such as hospital beds and ventilators to power all innovation challenges.</li>
-            <li>Infection: like rate of infection, hospital capacity and capability.
-            Epidemiology: contact tracing</li>
-        </ul>`,
-        long_description: ``
+        description: `Building a data collection platform`,
+        long_description: `
+        <p><strong>The COVID-19 pandemic revealed key data
+        shortages in healthcare systems, whether in
+        locating equipment or sharing resources.
+        In the US, the CDC* anticipates a second wave
+        of the virus so we must act now to supply
+        healthcare professionals with resources
+        needed to treat and save patients.</strong></p>`,
+        points: [
+            'Hospital supply chains are in disarray, forcing buyers to source supplies from the internet or unapproved vendors, where quality and effectiveness are not necessarily guaranteed.',
+            'Build an online tool to connect hospital procurement departments with suppliers ',
+            'Includes a feature where hospitals post supplies needed and how quickly they are required, and vendors respond with availability',
+        ]
     },
     {
         id: 'covent-19',
