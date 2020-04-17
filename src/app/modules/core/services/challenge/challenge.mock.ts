@@ -47,7 +47,7 @@ export const CHALLENGES = [
             'Hospital supply chains are in disarray, forcing buyers to source supplies from the internet or unapproved vendors, where quality and effectiveness are not necessarily guaranteed.',
             'Build an online tool to connect hospital procurement departments with suppliers ',
             'Includes a feature where hospitals post supplies needed and how quickly they are required, and vendors respond with availability',
-        ]
+        ],
     },
     {
         id: 'covent-19',
