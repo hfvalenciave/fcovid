@@ -1,13 +1,102 @@
 :host {
     .masthead {
-        background-color: white;
-        background-image: url(../../../assets/img/bg-masthead.png);
-        background-position: center;
-        background-repeat: no-repeat;
         height: 300px;
 
-        padding-right: 90px;
-        padding-top: 185px;
+        @media (max-width: 991px) {
+            height: 75vw;
+        }
+
+        .masthead-left {
+            background-image: url(../../../assets/img/bg-masthead-mobile.png);
+            background-position-x: left;
+            background-position-y: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            padding-right: 90px;
+            padding-top: 185px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 645px;
+            z-index: -1;
+
+            @media (max-width: 1200px) {
+                width: 600px;
+            }
+
+            @media (max-width: 991px) {
+                right: 0;
+                background-position-x: center;
+                width: auto;
+            }
+        }
+
+        .masthead-right {
+            background-image: url(../../../assets/img/FCovid-by-HF-and-Hack-Fund-logo.png);
+            background-position-x: left;
+            background-position-y: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 600px;
+            display: flex;
+            flex-direction: column-reverse;
+            padding-bottom: 30px;
+            padding-right: 35px;
+            font-size: 1.4rem;
+
+            p {
+                font-weight: 500;
+                margin-top: 15px;
+            }
+
+            @media (max-width: 1200px) {
+                width: 480px;
+                padding-bottom: 45px;
+                padding-right: 30px;
+                font-size: 1.2rem;
+            }
+
+            @media (max-width: 991px) {
+                left: 25px;
+                right: 25px;
+                bottom: 50px;
+                background-position-x: center;
+                background-position-y: bottom;
+                width: auto;
+                height: auto;
+
+                p {
+                    position: absolute;
+                    bottom: -25px;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                }
+            }
+
+            @media (max-width: 480px) {
+                bottom: 50px;
+
+                p {
+                    bottom: -60px;
+                    padding: 0 5rem !important;
+                    font-size: 1rem;
+                }
+            }
+
+            @media (max-width: 480px) {
+                p {
+                    padding: 0;
+                }
+            }
+        }
 
         .mini-logo {
             font-size: 15px;
@@ -17,12 +106,6 @@
                 height: 15px;
                 margin-bottom: 6px;
             }
-        }
-
-        p {
-            font-size: 1.4rem;
-            font-weight: 500;
-            margin-top: 15px;
         }
     }
 

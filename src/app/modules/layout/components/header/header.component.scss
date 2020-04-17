@@ -38,3 +38,16 @@
     padding-left: 3em;
     padding-right: 3em;
 }
+
+.btn-menu-mobile {
+    font-size: 2rem;
+}
+
+.dropdown-mobile {
+    position: absolute;
+    right: -30px;
+    top: 68px;
+    background: white;
+    box-shadow: -1px 1px 5px;
+    z-index: 200;
+}

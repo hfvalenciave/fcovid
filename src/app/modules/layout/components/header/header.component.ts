@@ -9,6 +9,8 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 })
 export class HeaderComponent implements OnInit {
 
+  showMenu = false;
+
   @ViewChild(ContactModalComponent,  {static: false}) contactModal: ContactModalComponent;
   bsModalRef: BsModalRef;
   constructor(private modalService: BsModalService) {}
@@ -30,4 +32,7 @@ export class HeaderComponent implements OnInit {
     this.bsModalRef.content.closeBtnName = 'Close';
   }
 
+  close() {
+    setTimeout(() => this.showMenu = false, 1500);
+  }
 }

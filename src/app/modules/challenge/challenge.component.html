@@ -1,19 +1,19 @@
 <header class="text-dark text-lg-right text-center" class="header"
-[ngStyle]="{'background-image': 'url('+(challenge | async).home_background+')'}">
+    [ngStyle]="{'background-image': 'url('+(challenge | async).home_background+')'}">
     <img [src]="(challenge | async).image" class="banner m-auto">
 </header>
 <section class="bg-dark">
     <div class="container bg-dark text-center text-white p-5">
         <div class="row">
-            <div class="col-lg-5 col-md-5 d-flex">
-                <span class="m-auto">
+            <div class="col-xl-5 col-lg-12 d-flex align-items-center mb-2">
+                <span class="m-auto m-lg-0">
                     Status: {{ (challenge | async).status }}
                 </span>
             </div>
-            <div class="col-lg-4 col-md-4">
-                <button class="btn btn-lg btn-light v-center" (click)="showModal()">Contact Challenge Leader</button>
+            <div class="col-xl-4 col-lg-6 col-md-12 mb-2">
+                <button class="btn btn-lg btn-light v-center full" (click)="showModal()">Contact Challenge Leader</button>
             </div>
-            <div class="col-lg-3 col-md-3">
+            <div class="col-xl-3 col-lg-6 col-md-12 mb-2">
                 <a class="btn btn-lg btn-light v-center full" href="#">Donate</a>
             </div>
         </div>
@@ -56,7 +56,7 @@
                         If you would like to speak directly to the people building solutions, please complete the
                         optional contact information.
                     </p>
-                    <button class="btn btn-primary" (click)="showModalAnonymous()">Fill Anonymous form</button>
+                    <button class="btn btn-primary mt-2" (click)="showModalAnonymous()">Fill Anonymous form</button>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-3 mb-lg-0">
@@ -64,9 +64,10 @@
                     class="bg-light d-flex features-icons-item flex-column h-100 mb-5 mb-lg-0 mb-lg-3 mx-auto px-4 py-3 rounded">
                     <h5>ParticipateHackers and Entrepreneurs</h5>
                     <p class="lead mb-0 flex-fill">
-                        We welcome developers, designers, business development professionals, project managers and more to participate in hackathons to be announced.
+                        We welcome developers, designers, business development professionals, project managers and more
+                        to participate in hackathons to be announced.
                     </p>
-                    <button class="btn btn-primary" (click)="showModalParticipate()">Participate</button>
+                    <button class="btn btn-primary mt-2" (click)="showModalParticipate()">Participate</button>
                 </div>
             </div>
 
@@ -79,16 +80,16 @@
                         Areas of interest include healthcare administration; hardware and software; medical equipment;
                         legal; governmental, economic and environmental policy; and more.
                     </p>
-                    <button class="btn btn-primary" (click)="showModalAdvisors()">Contact FCOVID team</button>
+                    <button class="btn btn-primary mt-4" (click)="showModalAdvisors()">Contact FCOVID team</button>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-3 mb-lg-0">
                 <div
                     class="bg-dark d-flex features-icons-item flex-column h-100 mb-0 mb-lg-3 mx-auto px-4 py-3 rounded space">
                     <h4>Media press Inquiries:</h4>
-                    <a class="btn btn-light" href="https://hf.cx/" target="_blank">Hackers/Founders</a>
-                    <a class="btn btn-light" href="https://hack.hf.cx/" target="_blank">HACK/Fund</a>
-                    <a class="btn btn-light" href="mailto:media@hf.cx" target="_blank">media@hf.cx</a>
+                    <a class="btn btn-light mb-2" href="https://hf.cx/" target="_blank">Hackers/Founders</a>
+                    <a class="btn btn-light mb-2" href="https://hack.hf.cx/" target="_blank">HACK/Fund</a>
+                    <a class="btn btn-light mb-2" href="mailto:media@hf.cx" target="_blank">media@hf.cx</a>
                 </div>
             </div>
         </div>
