@@ -1,19 +1,20 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+
+import { environment } from 'src/environments/environment';
+
+const urlMessage = 'messages';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  sendEmail(data, type) {
-      console.log(data);
-      console.log(type);
-      data = {
-        'data' : data,
-        'messageType' : type
-      }
-      console.log(data);
+  sendEmail(data, messageType) {
+      const url = `${environment.api.url}/${urlMessage}`;
+      const message = { data, messageType };
+      return this.http.post(url, message).subscribe(response => console.log(response));
   }
 }

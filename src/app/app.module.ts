@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,6 +15,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     imports: [
         AppRoutingModule,
         BrowserModule,
+        HttpClientModule,
         LayoutModule,
         NgxPageScrollModule,
         ModalModule
