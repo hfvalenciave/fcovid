@@ -28,6 +28,9 @@
             height: 278px;
             padding: 3rem;
             text-align: center;
+            @media (max-width: 480px) {
+                height: 390px;
+            }
             h3 {
                 line-height: 19px;
                 font-family: "Montserrat", Helvetica, Arial, serif;
