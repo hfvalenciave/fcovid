@@ -9,11 +9,6 @@ const routerOptions: ExtraOptions = {
 const routes: Routes = [
     {
         path: '',
-        pathMatch: 'full',
-        redirectTo: 'home'
-    },
-    {
-        path: 'home',
         loadChildren: () => import('./modules/landing/landing.module').then(m => m.LandingModule)
     },
     {
